@@ -34,9 +34,6 @@ const page = async ({ params }) => {
   const ageData = getPredictedAge(params.name);
   const genderData = getPredictedGender(params.name);
   const countryData = getPredictedCountry(params.name);
-  console.log(ageData);
-  console.log(genderData);
-  console.log(countryData);
   const [age, gender, country] = await Promise.all([
     ageData,
     genderData,
